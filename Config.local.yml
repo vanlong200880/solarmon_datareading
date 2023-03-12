@@ -41,7 +41,7 @@
     context_path: 'api/',
     use_cluster: false,
     env : 'production',
-    listenPort: 3010,
+    listenPort: 3003,
     protocol: 'http://',
     use_ssl: false,
     ssl_option: {
