@@ -104,10 +104,10 @@
     
   },
   mysql: {
-    host     : '103.110.86.80',
+    host     :  '103.110.86.197', #'103.110.86.80',
     port     : 3306,
-    user		: 'solarmon',
-    password     : 'sL4e2dripBS5X8Jc',
+    user		: 'solarmon_admin',
+    password     :  'Solarmon@123', #'sL4e2dripBS5X8Jc',
     database : 'solarmon',
     # The maximum number of connections to create at once. (Default: 10)
     connectionLimit : 20000, 
