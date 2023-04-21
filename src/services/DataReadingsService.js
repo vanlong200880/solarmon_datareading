@@ -611,27 +611,27 @@ class DataReadingsService extends BaseService {
 								}
 							}
 
-							// if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
+							if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
 								rs = await db.insert("ModelReadings.insertModelInverterSMASTP50", dataEntity);
 								// Update device 
-								// if (rs) {
-								// 	let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
-								// 		id_device: getDeviceInfo.id,
-								// 		table_name: getDeviceInfo.table_name
-								// 	});
-								// 	if (lastRowDataUpdated) {
-								// 		let deviceUpdated = {
-								// 			id: getDeviceInfo.id,
-								// 			power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
-								// 			energy_today: lastRowDataUpdated.energy_today,
-								// 			last_month: lastRowDataUpdated.energy_last_month,
-								// 			lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
-								// 			last_updated: dataEntity.time
-								// 		};
-								// 		db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-								// 	}
-								// }
-							// }
+								if (rs) {
+									let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
+										id_device: getDeviceInfo.id,
+										table_name: getDeviceInfo.table_name
+									});
+									if (lastRowDataUpdated) {
+										let deviceUpdated = {
+											id: getDeviceInfo.id,
+											power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
+											energy_today: lastRowDataUpdated.energy_today,
+											last_month: lastRowDataUpdated.energy_last_month,
+											lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
+											last_updated: dataEntity.time
+										};
+										db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+									}
+								}
+							}
 
 							break;
 						case 'model_inverter_SMA_SHP75':
