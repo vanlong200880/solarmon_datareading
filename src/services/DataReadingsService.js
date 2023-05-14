@@ -674,7 +674,7 @@ class DataReadingsService extends BaseService {
 									});
 								}
 							}
-							// if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
+							if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
 								rs = await db.insert("ModelReadings.insertModelInverterSMASHP75", dataEntity);
 								// Update device 
 								if (rs) {
@@ -695,7 +695,7 @@ class DataReadingsService extends BaseService {
 									}
 								}
 
-							// }
+							}
 
 							break;
 						case 'model_inverter_Growatt_GW80KTL3':
