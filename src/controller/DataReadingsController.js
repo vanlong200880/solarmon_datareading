@@ -16,9 +16,9 @@ class DataReadingsController extends AbstractManagerController {
             let service = new DataReadingsService();
             let status = (postData.status).toUpperCase();
             let resData = {};
-            console.log("status: ", postData.status, " - deviceID: ", postData.deviceID, "- time: ", postData.timestamp);
-            const logger = FLLogger.getLogger(postData.deviceID);
-            logger.error(postData);
+            // console.log("status: ", postData.status, " - deviceID: ", postData.deviceID, "- time: ", postData.timestamp);
+            // const logger = FLLogger.getLogger(postData.deviceID);
+            // logger.error(postData);
 
             switch (status) {
                 case 'DISCONNECTED':
