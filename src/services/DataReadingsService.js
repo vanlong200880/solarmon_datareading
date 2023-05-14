@@ -409,11 +409,11 @@ class DataReadingsService extends BaseService {
 							}
 
 							rs = await db.insert("ModelReadings.insertModelSensorRT1", dataEntity);
-							if (rs) {
+							// if (rs) {
 								// Update device 
-								let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
-								db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-							}
+								// let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
+								// db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+							// }
 							break;
 
 						case 'model_techedge':
@@ -448,11 +448,11 @@ class DataReadingsService extends BaseService {
 							}
 
 							rs = await db.insert("ModelReadings.insertModelTechedge", dataEntity);
-							if (rs) {
+							// if (rs) {
 								// Update device 
-								let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
-								db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-							}
+								// let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
+								// db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+							// }
 							break;
 
 						case 'model_sensor_IMT_TaRS485':
@@ -487,11 +487,11 @@ class DataReadingsService extends BaseService {
 							}
 
 							rs = await db.insert("ModelReadings.insertModelSensorIMTTaRS485", dataEntity);
-							if (rs) {
+							// if (rs) {
 								// Update device 
-								let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
-								db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-							}
+								// let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
+								// db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+							// }
 							break;
 						case 'model_sensor_IMT_SiRS485':
 							dataEntity = Object.assign({}, new ModelSensorIMTSiRS485Entity(), dataPayload);
@@ -525,11 +525,11 @@ class DataReadingsService extends BaseService {
 							}
 
 							rs = await db.insert("ModelReadings.insertModelSensorIMTSiRS485", dataEntity);
-							if (rs) {
+							// if (rs) {
 								// Update device 
-								let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
-								db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-							}
+								// let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
+								// db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+							// }
 							break;
 						case 'model_logger_SMA_IM20':
 							dataEntity = Object.assign({}, new ModelLoggerSMAIM20Entity(), dataPayload);
@@ -563,11 +563,11 @@ class DataReadingsService extends BaseService {
 							}
 
 							rs = await db.insert("ModelReadings.insertModelLoggerSMAIM20", dataEntity);
-							if (rs) {
+							// if (rs) {
 								// Update device 
-								let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
-								db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-							}
+								// let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
+								// db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+							// }
 							break;
 						case 'model_inverter_Sungrow_SG110CX':
 							break;
