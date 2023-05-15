@@ -752,6 +752,7 @@ class DataReadingsService extends BaseService {
 		} catch (e) {
 			console.log('error', e);
 			callBack(false, e);
+			
 		}
 	}
 
