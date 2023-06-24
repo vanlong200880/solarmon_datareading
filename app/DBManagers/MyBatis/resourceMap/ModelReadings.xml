@@ -689,6 +689,7 @@
 			LEFT JOIN (
 				SELECT epm.id_project, GROUP_CONCAT( DISTINCT(e.email) SEPARATOR ', ' ) AS email , CONCAT(e.first_name, ' ', e.last_name) AS full_name FROM emloyee_project_map epm
 				LEFT JOIN employee e ON e.id = epm.id_employee
+				WHERE e.`status` = 1
 				GROUP BY epm.id_project
 			)t ON p.id = t.id_project
 		WHERE
