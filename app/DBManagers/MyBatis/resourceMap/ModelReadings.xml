@@ -678,6 +678,7 @@
 			d.manufacturer,
 			d.`status`,
 			dg.table_name,
+			dg.view_table,
 			pd.`name` AS project_name,
 			t.email,
 			t.full_name

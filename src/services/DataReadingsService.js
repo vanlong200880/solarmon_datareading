@@ -680,7 +680,7 @@ class DataReadingsService extends BaseService {
 								if (rs) {
 									let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
 										id_device: getDeviceInfo.id,
-										table_name: getDeviceInfo.table_name
+										table_name: getDeviceInfo.view_table
 									});
 									if (lastRowDataUpdated) {
 										let deviceUpdated = {
