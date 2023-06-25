@@ -91,27 +91,27 @@ class DataReadingsService extends BaseService {
 								}
 							}
 
-							if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
+							// if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
 								rs = await db.insert("ModelReadings.insertModelEmeterGelexEmicME41", dataEntity);
 								// Update device 
-								if (rs) {
-									let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
-										id_device: getDeviceInfo.id,
-										table_name: getDeviceInfo.table_name
-									});
-									if (lastRowDataUpdated) {
-										let deviceUpdated = {
-											id: getDeviceInfo.id,
-											power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
-											energy_today: lastRowDataUpdated.energy_today,
-											last_month: lastRowDataUpdated.energy_last_month,
-											lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
-											last_updated: dataEntity.time
-										};
-										db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-									}
-								}
-							}
+								// if (rs) {
+								// 	let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
+								// 		id_device: getDeviceInfo.id,
+								// 		table_name: getDeviceInfo.table_name
+								// 	});
+								// 	if (lastRowDataUpdated) {
+								// 		let deviceUpdated = {
+								// 			id: getDeviceInfo.id,
+								// 			power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
+								// 			energy_today: lastRowDataUpdated.energy_today,
+								// 			last_month: lastRowDataUpdated.energy_last_month,
+								// 			lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
+								// 			last_updated: dataEntity.time
+								// 		};
+								// 		db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+								// 	}
+								// }
+							// }
 
 							break;
 
@@ -156,27 +156,27 @@ class DataReadingsService extends BaseService {
 								}
 							}
 
-							if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
+							// if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
 								rs = await db.insert("ModelReadings.insertModelEmeterVinasinoVSE3T5", dataEntity);
 								// Update device 
-								if (rs) {
-									let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
-										id_device: getDeviceInfo.id,
-										table_name: getDeviceInfo.table_name
-									});
-									if (lastRowDataUpdated) {
-										let deviceUpdated = {
-											id: getDeviceInfo.id,
-											power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
-											energy_today: lastRowDataUpdated.energy_today,
-											last_month: lastRowDataUpdated.energy_last_month,
-											lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
-											last_updated: dataEntity.time
-										};
-										db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-									}
-								}
-							}
+								// if (rs) {
+								// 	let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
+								// 		id_device: getDeviceInfo.id,
+								// 		table_name: getDeviceInfo.table_name
+								// 	});
+								// 	if (lastRowDataUpdated) {
+								// 		let deviceUpdated = {
+								// 			id: getDeviceInfo.id,
+								// 			power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
+								// 			energy_today: lastRowDataUpdated.energy_today,
+								// 			last_month: lastRowDataUpdated.energy_last_month,
+								// 			lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
+								// 			last_updated: dataEntity.time
+								// 		};
+								// 		db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+								// 	}
+								// }
+							// }
 
 							break;
 
@@ -222,27 +222,27 @@ class DataReadingsService extends BaseService {
 									}
 								}
 	
-								if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
+								// if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
 									rs = await db.insert("ModelReadings.insertModelEmeterVinasinoVSE3T52023", dataEntity);
 									// Update device 
-									if (rs) {
-										let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
-											id_device: getDeviceInfo.id,
-											table_name: getDeviceInfo.table_name
-										});
-										if (lastRowDataUpdated) {
-											let deviceUpdated = {
-												id: getDeviceInfo.id,
-												power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
-												energy_today: lastRowDataUpdated.energy_today,
-												last_month: lastRowDataUpdated.energy_last_month,
-												lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
-												last_updated: dataEntity.time
-											};
-											db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-										}
-									}
-								}
+									// if (rs) {
+									// 	let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
+									// 		id_device: getDeviceInfo.id,
+									// 		table_name: getDeviceInfo.table_name
+									// 	});
+									// 	if (lastRowDataUpdated) {
+									// 		let deviceUpdated = {
+									// 			id: getDeviceInfo.id,
+									// 			power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
+									// 			energy_today: lastRowDataUpdated.energy_today,
+									// 			last_month: lastRowDataUpdated.energy_last_month,
+									// 			lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
+									// 			last_updated: dataEntity.time
+									// 		};
+									// 		db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+									// 	}
+									// }
+								// }
 	
 								break;
 
@@ -288,27 +288,27 @@ class DataReadingsService extends BaseService {
 								}
 							}
 
-							if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
+							// if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
 								rs = await db.insert("ModelReadings.insertModelInverterSMASTP110", dataEntity);
 								// Update device 
-								if (rs) {
-									let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
-										id_device: getDeviceInfo.id,
-										table_name: getDeviceInfo.table_name
-									});
-									if (lastRowDataUpdated) {
-										let deviceUpdated = {
-											id: getDeviceInfo.id,
-											power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
-											energy_today: lastRowDataUpdated.energy_today,
-											last_month: lastRowDataUpdated.energy_last_month,
-											lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
-											last_updated: dataEntity.time
-										};
-										db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-									}
-								}
-							}
+								// if (rs) {
+								// 	let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
+								// 		id_device: getDeviceInfo.id,
+								// 		table_name: getDeviceInfo.table_name
+								// 	});
+								// 	if (lastRowDataUpdated) {
+								// 		let deviceUpdated = {
+								// 			id: getDeviceInfo.id,
+								// 			power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
+								// 			energy_today: lastRowDataUpdated.energy_today,
+								// 			last_month: lastRowDataUpdated.energy_last_month,
+								// 			lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
+								// 			last_updated: dataEntity.time
+								// 		};
+								// 		db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+								// 	}
+								// }
+							// }
 
 							break;
 
@@ -353,27 +353,27 @@ class DataReadingsService extends BaseService {
 								}
 							}
 
-							if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
+							// if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
 								rs = await db.insert("ModelReadings.insertModelInverterABBPVS100", dataEntity);
 								// Update device 
-								if (rs) {
-									let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
-										id_device: getDeviceInfo.id,
-										table_name: getDeviceInfo.table_name
-									});
-									if (lastRowDataUpdated) {
-										let deviceUpdated = {
-											id: getDeviceInfo.id,
-											power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
-											energy_today: lastRowDataUpdated.energy_today,
-											last_month: lastRowDataUpdated.energy_last_month,
-											lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
-											last_updated: dataEntity.time
-										};
-										db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-									}
-								}
-							}
+								// if (rs) {
+								// 	let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
+								// 		id_device: getDeviceInfo.id,
+								// 		table_name: getDeviceInfo.table_name
+								// 	});
+								// 	if (lastRowDataUpdated) {
+								// 		let deviceUpdated = {
+								// 			id: getDeviceInfo.id,
+								// 			power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
+								// 			energy_today: lastRowDataUpdated.energy_today,
+								// 			last_month: lastRowDataUpdated.energy_last_month,
+								// 			lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
+								// 			last_updated: dataEntity.time
+								// 		};
+								// 		db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+								// 	}
+								// }
+							// }
 
 							break;
 						case 'model_sensor_RT1':
@@ -409,11 +409,11 @@ class DataReadingsService extends BaseService {
 							}
 
 							rs = await db.insert("ModelReadings.insertModelSensorRT1", dataEntity);
-							if (rs) {
+							// if (rs) {
 								// Update device 
-								let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
-								db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-							}
+								// let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
+								// db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+							// }
 							break;
 
 						case 'model_techedge':
@@ -448,11 +448,11 @@ class DataReadingsService extends BaseService {
 							}
 
 							rs = await db.insert("ModelReadings.insertModelTechedge", dataEntity);
-							if (rs) {
+							// if (rs) {
 								// Update device 
-								let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
-								db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-							}
+								// let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
+								// db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+							// }
 							break;
 
 						case 'model_sensor_IMT_TaRS485':
@@ -487,11 +487,11 @@ class DataReadingsService extends BaseService {
 							}
 
 							rs = await db.insert("ModelReadings.insertModelSensorIMTTaRS485", dataEntity);
-							if (rs) {
+							// if (rs) {
 								// Update device 
-								let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
-								db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-							}
+								// let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
+								// db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+							// }
 							break;
 						case 'model_sensor_IMT_SiRS485':
 							dataEntity = Object.assign({}, new ModelSensorIMTSiRS485Entity(), dataPayload);
@@ -525,11 +525,11 @@ class DataReadingsService extends BaseService {
 							}
 
 							rs = await db.insert("ModelReadings.insertModelSensorIMTSiRS485", dataEntity);
-							if (rs) {
+							// if (rs) {
 								// Update device 
-								let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
-								db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-							}
+								// let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
+								// db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+							// }
 							break;
 						case 'model_logger_SMA_IM20':
 							dataEntity = Object.assign({}, new ModelLoggerSMAIM20Entity(), dataPayload);
@@ -563,11 +563,11 @@ class DataReadingsService extends BaseService {
 							}
 
 							rs = await db.insert("ModelReadings.insertModelLoggerSMAIM20", dataEntity);
-							if (rs) {
+							// if (rs) {
 								// Update device 
-								let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
-								db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-							}
+								// let deviceUpdated = { id: getDeviceInfo.id, power_now: null, energy_today: null, last_month: null, lifetime: null, last_updated: dataEntity.time };
+								// db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+							// }
 							break;
 						case 'model_inverter_Sungrow_SG110CX':
 							break;
@@ -611,27 +611,27 @@ class DataReadingsService extends BaseService {
 								}
 							}
 
-							if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
+							// if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
 								rs = await db.insert("ModelReadings.insertModelInverterSMASTP50", dataEntity);
 								// Update device 
-								if (rs) {
-									let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
-										id_device: getDeviceInfo.id,
-										table_name: getDeviceInfo.table_name
-									});
-									if (lastRowDataUpdated) {
-										let deviceUpdated = {
-											id: getDeviceInfo.id,
-											power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
-											energy_today: lastRowDataUpdated.energy_today,
-											last_month: lastRowDataUpdated.energy_last_month,
-											lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
-											last_updated: dataEntity.time
-										};
-										db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-									}
-								}
-							}
+								// if (rs) {
+								// 	let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
+								// 		id_device: getDeviceInfo.id,
+								// 		table_name: getDeviceInfo.table_name
+								// 	});
+								// 	if (lastRowDataUpdated) {
+								// 		let deviceUpdated = {
+								// 			id: getDeviceInfo.id,
+								// 			power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
+								// 			energy_today: lastRowDataUpdated.energy_today,
+								// 			last_month: lastRowDataUpdated.energy_last_month,
+								// 			lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
+								// 			last_updated: dataEntity.time
+								// 		};
+								// 		db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+								// 	}
+								// }
+							// }
 
 							break;
 						case 'model_inverter_SMA_SHP75':
@@ -674,28 +674,28 @@ class DataReadingsService extends BaseService {
 									});
 								}
 							}
-							if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
+							// if (!Libs.isBlank(dataEntity.activeEnergy) && dataEntity.activeEnergy > 0) {
 								rs = await db.insert("ModelReadings.insertModelInverterSMASHP75", dataEntity);
 								// Update device 
-								if (rs) {
-									let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
-										id_device: getDeviceInfo.id,
-										table_name: getDeviceInfo.table_name
-									});
-									if (lastRowDataUpdated) {
-										let deviceUpdated = {
-											id: getDeviceInfo.id,
-											power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
-											energy_today: lastRowDataUpdated.energy_today,
-											last_month: lastRowDataUpdated.energy_last_month,
-											lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
-											last_updated: dataEntity.time
-										};
-										db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
-									}
-								}
+								// if (rs) {
+								// 	let lastRowDataUpdated = await db.queryForObject("ModelReadings.getDataUpdateDevice", {
+								// 		id_device: getDeviceInfo.id,
+								// 		table_name: getDeviceInfo.table_name
+								// 	});
+								// 	if (lastRowDataUpdated) {
+								// 		let deviceUpdated = {
+								// 			id: getDeviceInfo.id,
+								// 			power_now: lastRowDataUpdated.activePower ? lastRowDataUpdated.activePower : null,
+								// 			energy_today: lastRowDataUpdated.energy_today,
+								// 			last_month: lastRowDataUpdated.energy_last_month,
+								// 			lifetime: lastRowDataUpdated.activeEnergy ? lastRowDataUpdated.activeEnergy : null,
+								// 			last_updated: dataEntity.time
+								// 		};
+								// 		db.update("ModelReadings.updatedDevicePlant", deviceUpdated);
+								// 	}
+								// }
 
-							}
+							// }
 
 							break;
 						case 'model_inverter_Growatt_GW80KTL3':
