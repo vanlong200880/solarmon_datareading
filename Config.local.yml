@@ -105,7 +105,7 @@
   },
   mysql: {
 
-    host     : '103.110.86.197',
+    host     : '103.110.86.80',
     port     : 3306,
     user                : 'solarmon_admin',
     password     : 'sL4e2dripBS5X8Jc',
